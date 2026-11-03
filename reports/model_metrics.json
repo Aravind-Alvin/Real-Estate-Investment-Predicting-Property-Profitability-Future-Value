@@ -1,0 +1,123 @@
+{
+  "n_train": 200000,
+  "n_test": 50000,
+  "n_features": 37,
+  "classification": {
+    "candidates": {
+      "Logistic Regression": {
+        "accuracy": 0.95084,
+        "precision": 0.9182210421506803,
+        "recall": 0.9185868915598645,
+        "f1": 0.9184039304209268,
+        "roc_auc": 0.9898353902029595,
+        "cv_f1_mean_40k": 0.91755450156318,
+        "cv_f1_std_40k": 0.0011003259863894173
+      },
+      "Random Forest": {
+        "accuracy": 0.97052,
+        "precision": 0.9474932472494895,
+        "recall": 0.9550434955840361,
+        "f1": 0.951253389774456,
+        "roc_auc": 0.9965498270362765,
+        "cv_f1_mean_40k": 0.917398767657334,
+        "cv_f1_std_40k": 0.003600322164101699
+      },
+      "Gradient Boosting": {
+        "accuracy": 0.99302,
+        "precision": 0.9868281705056924,
+        "recall": 0.9900391792283684,
+        "f1": 0.9884310670600325,
+        "roc_auc": 0.9998153423870288,
+        "cv_f1_mean_40k": 0.976222681446886,
+        "cv_f1_std_40k": 0.002504452118061352
+      }
+    },
+    "best_model": "Gradient Boosting",
+    "confusion_matrix_[[TN,FP],[FN,TP]]": [
+      [
+        34742,
+        199
+      ],
+      [
+        150,
+        14909
+      ]
+    ],
+    "share_predictions_with_confidence_ge_0.9": 0.91962,
+    "mean_confidence": 0.9743590151312076,
+    "calibration": [
+      {
+        "bin": "(-0.001, 0.1]",
+        "n": 33007,
+        "mean_pred": 0.0031,
+        "actual_rate": 0.0
+      },
+      {
+        "bin": "(0.1, 0.3]",
+        "n": 1186,
+        "mean_pred": 0.1876,
+        "actual_rate": 0.0093
+      },
+      {
+        "bin": "(0.3, 0.5]",
+        "n": 699,
+        "mean_pred": 0.3956,
+        "actual_rate": 0.1989
+      },
+      {
+        "bin": "(0.5, 0.7]",
+        "n": 793,
+        "mean_pred": 0.6066,
+        "actual_rate": 0.7642
+      },
+      {
+        "bin": "(0.7, 0.9]",
+        "n": 1341,
+        "mean_pred": 0.8162,
+        "actual_rate": 0.9911
+      },
+      {
+        "bin": "(0.9, 1.0]",
+        "n": 12974,
+        "mean_pred": 0.9905,
+        "actual_rate": 1.0
+      }
+    ],
+    "positive_rate_test": 0.30118,
+    "majority_class_baseline_accuracy": 0.69882
+  },
+  "regression": {
+    "candidates": {
+      "Ridge": {
+        "r2_rate": 0.9348083280299326,
+        "mae_rate_pp": 0.2671211734834652,
+        "mae_future_price_lakhs": 3.7382080489931546,
+        "mape_future_price_pct": 1.2559506600473727
+      },
+      "Random Forest": {
+        "r2_rate": 0.988593523232122,
+        "mae_rate_pp": 0.11042009241847256,
+        "mae_future_price_lakhs": 1.8249021879703855,
+        "mape_future_price_pct": 0.5187241335093927
+      },
+      "Gradient Boosting": {
+        "r2_rate": 0.997884875959069,
+        "mae_rate_pp": 0.04813449502237488,
+        "mae_future_price_lakhs": 0.7805645182500982,
+        "mape_future_price_pct": 0.2259960089303734
+      }
+    },
+    "best_model": "Gradient Boosting",
+    "baseline_constant_rate": {
+      "rate": 0.06410111199999999,
+      "mae_future_price_lakhs": 17.562627395478586,
+      "r2_rate": 0.0
+    },
+    "residual_std_pp": 0.06361456828277899
+  },
+  "fair_price_check": {
+    "r2_test": -0.00019810850646106992,
+    "mae_lakhs": 121.96443751019072,
+    "mae_if_predicting_mean_lakhs": 121.95240912538402
+  }
+}
