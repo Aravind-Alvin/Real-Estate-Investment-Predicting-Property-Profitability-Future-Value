@@ -1,0 +1,124 @@
+{
+  "best_classifier": "XGBoost",
+  "best_regressor": "XGBoost",
+  "classification": {
+    "Logistic Regression": {
+      "accuracy": 0.854,
+      "precision": 0.8621,
+      "recall": 0.8689,
+      "f1": 0.8655,
+      "roc_auc": 0.9376,
+      "train_seconds": 4.0088
+    },
+    "Random Forest": {
+      "accuracy": 0.9735,
+      "precision": 0.9716,
+      "recall": 0.9796,
+      "f1": 0.9756,
+      "roc_auc": 0.9967,
+      "train_seconds": 6.8526
+    },
+    "XGBoost": {
+      "accuracy": 0.9974,
+      "precision": 0.997,
+      "recall": 0.9982,
+      "f1": 0.9976,
+      "roc_auc": 1.0,
+      "train_seconds": 14.3763
+    }
+  },
+  "regression": {
+    "Linear Regression": {
+      "rmse": 9.4193,
+      "mae": 6.796,
+      "r2": 0.9978,
+      "mape": 4.9,
+      "train_seconds": 4.3141
+    },
+    "Random Forest": {
+      "rmse": 4.1315,
+      "mae": 3.0343,
+      "r2": 0.9996,
+      "mape": 0.9613,
+      "train_seconds": 35.394
+    },
+    "XGBoost": {
+      "rmse": 1.7298,
+      "mae": 1.3356,
+      "r2": 0.9999,
+      "mape": 0.5783,
+      "train_seconds": 16.9851
+    }
+  },
+  "ablation_no_price": {
+    "accuracy": 0.87232,
+    "f1": 0.8823008849557522,
+    "roc_auc": 0.9546162760278736
+  },
+  "clf_importance": {
+    "City": 39.35100173950195,
+    "BHK": 13.130999565124512,
+    "Availability_Status": 11.569000244140625,
+    "Price_vs_City_Median": 11.27400016784668,
+    "Sqft_per_BHK": 6.48199987411499,
+    "Infrastructure_Score": 6.480999946594238,
+    "Property_Type": 2.365999937057495,
+    "Price_per_SqFt_INR": 2.010999917984009,
+    "Log_PPSF": 1.4709999561309814,
+    "Public_Transport_Accessibility": 1.128000020980835,
+    "Age_of_Property": 1.0829999446868896,
+    "School_Density_Score": 1.0779999494552612,
+    "Size_in_SqFt": 0.7749999761581421,
+    "Nearby_Hospitals": 0.5450000166893005,
+    "Nearby_Schools": 0.33500000834465027
+  },
+  "reg_importance": {
+    "Price_in_Lakhs": 74.95800018310547,
+    "Price_vs_City_Median": 9.737000465393066,
+    "Price_per_SqFt_INR": 7.756999969482422,
+    "Size_in_SqFt": 2.4210000038146973,
+    "Availability_Status": 1.8049999475479126,
+    "City": 1.5180000066757202,
+    "Log_PPSF": 0.9679999947547913,
+    "Property_Type": 0.36500000953674316,
+    "Age_of_Property": 0.23999999463558197,
+    "Infrastructure_Score": 0.20900000631809235,
+    "Public_Transport_Accessibility": 0.009999999776482582,
+    "School_Density_Score": 0.004999999888241291,
+    "Nearby_Hospitals": 0.0020000000949949026,
+    "Nearby_Schools": 0.0010000000474974513,
+    "Sqft_per_BHK": 0.0010000000474974513
+  },
+  "features": [
+    "BHK",
+    "Size_in_SqFt",
+    "Price_in_Lakhs",
+    "Price_per_SqFt_INR",
+    "Log_PPSF",
+    "Age_of_Property",
+    "Floor_No",
+    "Total_Floors",
+    "Floor_Ratio",
+    "Nearby_Schools",
+    "Nearby_Hospitals",
+    "School_Density_Score",
+    "Infrastructure_Score",
+    "Amenity_Count",
+    "Sqft_per_BHK",
+    "City_Median_PPSF",
+    "Price_vs_City_Median",
+    "City",
+    "Property_Type",
+    "Furnished_Status",
+    "Public_Transport_Accessibility",
+    "Parking_Space",
+    "Security",
+    "Facing",
+    "Owner_Type",
+    "Availability_Status",
+    "Locality"
+  ],
+  "rmse": 1.7297874634740271,
+  "mae": 1.3356405400566609,
+  "horizon_years": 5
+}

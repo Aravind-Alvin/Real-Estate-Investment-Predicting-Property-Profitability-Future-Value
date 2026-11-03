@@ -1,0 +1,17 @@
+(
+echo __pycache__/
+echo *.pyc
+echo .venv/
+echo venv/
+echo env/
+echo .env
+echo .env.*
+echo !.env.example
+echo .streamlit/secrets.toml
+echo .ipynb_checkpoints/
+echo .vscode/
+echo .pytest_cache/
+echo *.log
+echo .DS_Store
+echo Thumbs.db
+) > .gitignore

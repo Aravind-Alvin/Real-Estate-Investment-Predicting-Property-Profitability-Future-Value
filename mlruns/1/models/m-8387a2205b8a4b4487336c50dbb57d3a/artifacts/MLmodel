@@ -1,0 +1,53 @@
+artifact_path: file:C:/Users/TECH-GENIUSES/Desktop/LABMENTIX/Data Analytics with AI/Project_14
+  Real Estate Investment Advisor Predicting Property Profitability & Future Value/Real
+  Estate Investment Advisor Predicting Property Profitability & Future Value/mlruns/1/models/m-8387a2205b8a4b4487336c50dbb57d3a/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.14.4
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.2
+    skops_trusted_types: null
+is_signature_from_type_hint: false
+mlflow_version: 3.15.2
+model_id: m-8387a2205b8a4b4487336c50dbb57d3a
+model_size_bytes: 704784
+model_uuid: m-8387a2205b8a4b4487336c50dbb57d3a
+prompts: null
+run_id: fe6e0c96958043509f7c3bf14aac1ed4
+saved_input_example_info:
+  artifact_path: input_example.json
+  pandas_orient: split
+  serving_input_path: serving_input_example.json
+  type: dataframe
+signature:
+  inputs: '[{"type": "long", "name": "BHK", "required": true}, {"type": "long", "name":
+    "Size_in_SqFt", "required": true}, {"type": "long", "name": "Age_of_Property",
+    "required": true}, {"type": "long", "name": "Floor_No", "required": true}, {"type":
+    "long", "name": "Total_Floors", "required": true}, {"type": "double", "name":
+    "Floor_Ratio", "required": true}, {"type": "long", "name": "Nearby_Schools", "required":
+    true}, {"type": "long", "name": "Nearby_Hospitals", "required": true}, {"type":
+    "double", "name": "School_Density_Score", "required": true}, {"type": "double",
+    "name": "Infrastructure_Score", "required": true}, {"type": "long", "name": "Amenity_Count",
+    "required": true}, {"type": "double", "name": "Sqft_per_BHK", "required": true},
+    {"type": "string", "name": "City", "required": true}, {"type": "string", "name":
+    "Property_Type", "required": true}, {"type": "string", "name": "Furnished_Status",
+    "required": true}, {"type": "string", "name": "Public_Transport_Accessibility",
+    "required": true}, {"type": "string", "name": "Parking_Space", "required": true},
+    {"type": "string", "name": "Security", "required": true}, {"type": "string", "name":
+    "Facing", "required": true}, {"type": "string", "name": "Owner_Type", "required":
+    true}, {"type": "string", "name": "Availability_Status", "required": true}, {"type":
+    "string", "name": "Locality", "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float32", "shape": [-1,
+    2]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2026-10-26 06:47:19.410935'
