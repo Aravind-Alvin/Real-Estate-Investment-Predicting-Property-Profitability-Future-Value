@@ -1,0 +1,79 @@
+{
+  "classifier": {
+    "models": {
+      "LogisticRegression": {
+        "accuracy": 0.97422,
+        "precision": 0.9488065579040424,
+        "recall": 0.9476641515492054,
+        "f1": 0.9482350106421429,
+        "roc_auc": 0.996541357491885,
+        "confusion_matrix[[TN,FP],[FN,TP]]": [
+          [
+            36905,
+            637
+          ],
+          [
+            652,
+            11806
+          ]
+        ]
+      },
+      "HistGradientBoosting": {
+        "accuracy": 0.99138,
+        "precision": 0.984061820816228,
+        "recall": 0.9812971584524001,
+        "f1": 0.9826775451147461,
+        "roc_auc": 0.9996736549590065,
+        "confusion_matrix[[TN,FP],[FN,TP]]": [
+          [
+            37344,
+            198
+          ],
+          [
+            233,
+            12225
+          ]
+        ]
+      }
+    },
+    "selected": "HistGradientBoosting",
+    "test_rows": 50000,
+    "positive_rate_test": 0.24916,
+    "caveat": "Label is a deterministic rule of the inputs, so high scores show the model reproduces the rule - they are NOT evidence of predicting real market outcomes.",
+    "permutation_importance_f1_drop_top12": {
+      "PPSF_vs_City": 0.4348,
+      "Infrastructure_Score": 0.2354,
+      "Is_Ready": 0.2209,
+      "Age_of_Property": 0.1777,
+      "Amenity_Count": 0.1218,
+      "Price_per_SqFt_INR": 0.121,
+      "Security_Flag": 0.0978,
+      "Parking_Flag": 0.0855,
+      "Public_Transport_Accessibility": 0.0003,
+      "Nearby_Schools": 0.0003,
+      "Nearby_Hospitals": 0.0001,
+      "Healthcare_Score": 0.0
+    }
+  },
+  "appreciation_regressor": {
+    "models": {
+      "Ridge": {
+        "r2": 0.9671997884349899,
+        "mae_pct_points": 0.167221620182881
+      },
+      "HistGradientBoosting": {
+        "r2": 0.9985174210672154,
+        "mae_pct_points": 0.03759382798326038
+      }
+    },
+    "selected": "HistGradientBoosting",
+    "target_std_pct_points": 1.2283674754329854
+  },
+  "current_price_diagnostic": {
+    "gbm_r2": -0.00032017692776920015,
+    "gbm_mae_lakhs": 122.32575032657076,
+    "predict_mean_r2": -1.2791930033007048e-06,
+    "predict_mean_mae_lakhs": 122.31777643721,
+    "conclusion": "Current price is not predictable from the listing attributes in this dataset (R2 ~ 0). The app therefore benchmarks an asking price against comparable listings instead of pretending to predict it."
+  }
+}
