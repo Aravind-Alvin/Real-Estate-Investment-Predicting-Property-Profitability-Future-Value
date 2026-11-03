@@ -1,0 +1,16 @@
+{
+  "rows_raw": 250000,
+  "missing_before": 0,
+  "duplicates_removed": 0,
+  "invalid_rows_removed": 0,
+  "age_reference_year": 2025,
+  "age_inconsistent_rows": 0,
+  "floor_gt_total_rows": 116304,
+  "floor_gt_total_pct": 46.52,
+  "raw_price_per_sqft_rounded_to_zero": 2534,
+  "outliers_ppsf": 19723,
+  "outliers_size": 0,
+  "rows_clean": 250000,
+  "columns_clean": 55,
+  "good_investment_rate_pct": 24.92
+}
